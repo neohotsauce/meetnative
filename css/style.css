@@ -1,0 +1,140 @@
+html,
+body {
+  min-width: 100%;
+  min-height: 100%;
+  font-family: "Muli", sans-serif;
+  color: #ffffff;
+  font-size: 24px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.landing-section {
+  background: url(/img/landing-bg.svg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+nav {
+  padding-left: 6vw;
+  padding-right: 6vw;
+}
+nav a {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  margin-left: 24px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+nav div.ml-auto {
+  padding-top: 58px;
+}
+nav button {
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #c1a032;
+  padding: 16px 32px;
+  letter-spacing: 0.8px;
+  font-weight: 800;
+  font-size: 16px;
+  width: auto;
+  margin-top: 48px;
+  margin-left: 24px;
+}
+nav .logo {
+  margin-top: 56px;
+  margin-left: 0px;
+  vertical-align: text-top;
+}
+
+nav.mobile-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+nav.mobile-nav #menuToggle {
+  display: flex;
+  flex-direction: column;
+  margin-top: 7vw;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+  position: fixed;
+}
+nav.mobile-nav #menuToggle input {
+  display: flex;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+nav.mobile-nav #menuToggle span {
+  display: flex;
+  width: 29px;
+  height: 2px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #c1a032;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 5px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+nav.mobile-nav #menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+nav.mobile-nav #menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+nav.mobile-nav #menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-3px, -1px);
+  background: #ffffff;
+}
+nav.mobile-nav #menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+nav.mobile-nav #menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+nav.mobile-nav #menuToggle input:checked ~ ul {
+  transform: none;
+}
+nav.mobile-nav #menu {
+  list-style: none;
+  position: fixed;
+  color: #ffffff;
+  width: 60vw;
+  height: 150vh;
+  box-shadow: 0 0 10px #85888c;
+  margin: -70px 0 0 -134px;
+  padding-top: 125px;
+  padding-left: 6vw;
+  background-color: #c1a032;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+nav.mobile-nav #menu a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 0;
+  font-size: 16px;
+}
+nav.mobile-nav #menu li {
+  padding: 10px 0;
+  transition-delay: 2s;
+  max-width: 35vw;
+}
+
+/*# sourceMappingURL=style.css.map */
