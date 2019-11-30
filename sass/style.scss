@@ -13,13 +13,16 @@ body {
   line-height: normal;
   letter-spacing: normal;
 }
+button {
+  border: none;
+}
 .landing-section {
-  background: url(/img/landing-bg.svg) no-repeat center center fixed;
+  background: url(/img/landing-bg.svg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-height: 100vh;
+  min-height: calc(100vw - 34.02vw);
 }
 
 // styles for the desktop nav bar
@@ -138,6 +141,154 @@ nav.mobile-nav {
       padding: 10px 0;
       transition-delay: 2s;
       max-width: 35vw;
+    }
+  }
+}
+
+// styles for the hero section
+.hero-section {
+  padding: 2vh 8vw 15vh 8vw;
+  align-items: stretch;
+  height: 100%;
+  .hero-article,
+  .hero-image {
+    display: flex;
+  }
+  h1 {
+    font-size: 72px;
+    font-weight: 800;
+    margin-bottom: 14px;
+  }
+  p {
+    font-size: 32px;
+    font-weight: 200;
+    line-height: 1.38;
+  }
+}
+
+// styles for what we do section
+section.what-we-do {
+  margin-top: 9vh;
+  > div.header {
+    padding: 0 19vw 0 19vw;
+    h5 {
+      color: $p-color;
+      font-size: 22px;
+      font-weight: 800;
+    }
+    h4 {
+      font-size: 40px;
+      font-weight: 200;
+      line-height: 1.4;
+      color: #000000;
+      margin-bottom: 10vh;
+    }
+  }
+  .img-peach,
+  .img-grey {
+    padding: 8vw;
+    text-align: right;
+  }
+  .img-peach {
+    background-color: #f2e9db;
+  }
+  .img-grey {
+    background-color: #e4e4e4;
+    text-align: left;
+  }
+  .img-grey + .details {
+    text-align: right;
+  }
+  .details {
+    padding: 0 14vw 0 5vw;
+    h5 {
+      font-size: 32px;
+      font-weight: 300;
+      color: #000000;
+      margin-top: 24px;
+      span {
+        font-weight: bold;
+      }
+    }
+    .detailed-points {
+      margin-top: 32px;
+      .point {
+        margin-bottom: 17px;
+        display: flex;
+        div {
+          margin-right: 16px;
+        }
+        img {
+          max-height: 100%;
+        }
+        p {
+          font-size: 24px;
+          font-weight: 200;
+          color: #000000;
+          display: inline-block;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .grey-row .details {
+    padding: 0 5vw 0 14vw;
+  }
+}
+
+// styles for the how it works section
+section.how-it-works {
+  margin-top: 9vh;
+  > h5 {
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 1.4;
+    color: #000000;
+    text-align: center;
+    padding: 0 19vw 0 19vw;
+    margin-bottom: 5vh;
+  }
+  > div > .vertical-line {
+    width: 2px;
+    height: 96px;
+    background-color: #c1a033;
+    margin-bottom: 5vh;
+  }
+  > h4 {
+    margin-top: 14px;
+    font-size: 43px;
+    font-weight: 200;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 9vh;
+  }
+  .card-row {
+    color: #000000;
+    padding: 0 14vw 0 14vw;
+    > div {
+      padding: 0 12px;
+      .card-wrapper {
+        padding: 32px;
+        box-shadow: 0 20px 40px 10px rgba(224, 224, 224, 0.2);
+        h3 {
+          font-family: "Playfair Display", serif;
+          font-size: 120px;
+          font-weight: 900;
+          opacity: 0.4;
+          color: $p-color;
+          margin-bottom: 0;
+        }
+        h5 {
+          font-size: 24px;
+          font-weight: bold;
+          margin-bottom: 8px;
+        }
+        p {
+          font-size: 20px;
+          font-weight: 200;
+          line-height: 1.4;
+        }
+      }
     }
   }
 }

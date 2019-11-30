@@ -11,13 +11,17 @@ body {
   letter-spacing: normal;
 }
 
+button {
+  border: none;
+}
+
 .landing-section {
-  background: url(/img/landing-bg.svg) no-repeat center center fixed;
+  background: url(/img/landing-bg.svg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-height: 100vh;
+  min-height: calc(100vw - 34.02vw);
 }
 
 nav {
@@ -135,6 +139,151 @@ nav.mobile-nav #menu li {
   padding: 10px 0;
   transition-delay: 2s;
   max-width: 35vw;
+}
+
+.hero-section {
+  padding: 2vh 8vw 15vh 8vw;
+  align-items: stretch;
+  height: 100%;
+}
+.hero-section .hero-article,
+.hero-section .hero-image {
+  display: flex;
+}
+.hero-section h1 {
+  font-size: 72px;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+.hero-section p {
+  font-size: 32px;
+  font-weight: 200;
+  line-height: 1.38;
+}
+
+section.what-we-do {
+  margin-top: 9vh;
+}
+section.what-we-do > div.header {
+  padding: 0 19vw 0 19vw;
+}
+section.what-we-do > div.header h5 {
+  color: #c1a032;
+  font-size: 22px;
+  font-weight: 800;
+}
+section.what-we-do > div.header h4 {
+  font-size: 40px;
+  font-weight: 200;
+  line-height: 1.4;
+  color: #000000;
+  margin-bottom: 10vh;
+}
+section.what-we-do .img-peach,
+section.what-we-do .img-grey {
+  padding: 8vw;
+  text-align: right;
+}
+section.what-we-do .img-peach {
+  background-color: #f2e9db;
+}
+section.what-we-do .img-grey {
+  background-color: #e4e4e4;
+  text-align: left;
+}
+section.what-we-do .img-grey + .details {
+  text-align: right;
+}
+section.what-we-do .details {
+  padding: 0 14vw 0 5vw;
+}
+section.what-we-do .details h5 {
+  font-size: 32px;
+  font-weight: 300;
+  color: #000000;
+  margin-top: 24px;
+}
+section.what-we-do .details h5 span {
+  font-weight: bold;
+}
+section.what-we-do .details .detailed-points {
+  margin-top: 32px;
+}
+section.what-we-do .details .detailed-points .point {
+  margin-bottom: 17px;
+  display: flex;
+}
+section.what-we-do .details .detailed-points .point div {
+  margin-right: 16px;
+}
+section.what-we-do .details .detailed-points .point img {
+  max-height: 100%;
+}
+section.what-we-do .details .detailed-points .point p {
+  font-size: 24px;
+  font-weight: 200;
+  color: #000000;
+  display: inline-block;
+  margin-bottom: 0;
+}
+section.what-we-do .grey-row .details {
+  padding: 0 5vw 0 14vw;
+}
+
+section.how-it-works {
+  margin-top: 9vh;
+}
+section.how-it-works > h5 {
+  font-size: 40px;
+  font-weight: 200;
+  line-height: 1.4;
+  color: #000000;
+  text-align: center;
+  padding: 0 19vw 0 19vw;
+  margin-bottom: 5vh;
+}
+section.how-it-works > div > .vertical-line {
+  width: 2px;
+  height: 96px;
+  background-color: #c1a033;
+  margin-bottom: 5vh;
+}
+section.how-it-works > h4 {
+  margin-top: 14px;
+  font-size: 43px;
+  font-weight: 200;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 9vh;
+}
+section.how-it-works .card-row {
+  color: #000000;
+  padding: 0 14vw 0 14vw;
+}
+section.how-it-works .card-row > div {
+  padding: 0 12px;
+}
+section.how-it-works .card-row > div .card-wrapper {
+  padding: 32px;
+  box-shadow: 0 20px 40px 10px rgba(224, 224, 224, 0.2);
+}
+section.how-it-works .card-row > div .card-wrapper h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 120px;
+  font-weight: 900;
+  opacity: 0.4;
+  color: #c1a032;
+  margin-bottom: 0;
+}
+section.how-it-works .card-row > div .card-wrapper h5 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+section.how-it-works .card-row > div .card-wrapper p {
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 1.4;
 }
 
 /*# sourceMappingURL=style.css.map */
