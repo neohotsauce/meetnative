@@ -16,6 +16,9 @@ body {
 button {
   border: none;
 }
+.row {
+  margin: 0;
+}
 .landing-section {
   background: url(/img/landing-bg.svg) no-repeat center center;
   -webkit-background-size: cover;
@@ -71,7 +74,6 @@ nav.mobile-nav {
     z-index: 1;
     -webkit-user-select: none;
     user-select: none;
-    position: fixed;
     input {
       display: flex;
       width: 40px;
@@ -140,7 +142,7 @@ nav.mobile-nav {
     li {
       padding: 10px 0;
       transition-delay: 2s;
-      max-width: 35vw;
+      max-width: 150px;
     }
   }
 }
@@ -196,8 +198,8 @@ section.what-we-do {
     background-color: #e4e4e4;
     text-align: left;
   }
-  .img-grey + .details {
-    text-align: right;
+  .img-grey ~ .details {
+    text-align: left;
   }
   .details {
     padding: 0 14vw 0 5vw;
@@ -260,14 +262,16 @@ section.how-it-works {
     font-weight: 200;
     text-align: center;
     color: #000000;
-    margin-bottom: 9vh;
+    margin-bottom: calc(9vh - 24px);
   }
   .card-row {
     color: #000000;
     padding: 0 14vw 0 14vw;
     > div {
       padding: 0 12px;
+      margin-top: 24px;
       .card-wrapper {
+        height: 100%;
         padding: 32px;
         box-shadow: 0 20px 40px 10px rgba(224, 224, 224, 0.2);
         h3 {
@@ -289,6 +293,165 @@ section.how-it-works {
           line-height: 1.4;
         }
       }
+    }
+  }
+}
+
+section.discover {
+  color: #000000;
+  margin-top: 18vh;
+  > h1 {
+    font-size: 43px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: calc(9vh - 24px);
+  }
+  .card-row {
+    padding: 0 14vw 0 14vw;
+    > div {
+      padding: 0 12px;
+      margin-top: 24px;
+      .card-wrapper {
+        width: 100%;
+        padding-top: 100%;
+        position: relative;
+        box-shadow: 0 20px 40px 10px rgba(224, 224, 224, 0.2);
+        > * {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+        }
+        h5 {
+          font-size: 24px;
+          font-weight: bold;
+          text-align: center;
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+}
+
+// styles for the announcement goes below
+section.announcement {
+  color: #000000;
+  margin-top: 17vh;
+  > h1 {
+    padding: 0 15vw 0 15vw;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  > p {
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: center;
+    color: #626262;
+    padding: 0 17vw 0 17vw;
+    margin: 0;
+  }
+  .input-group {
+    position: relative;
+    top: -62px;
+    max-width: 550px;
+    input {
+      padding: 26px 24px;
+      height: auto;
+    }
+    ::placeholder {
+      font-size: 20px;
+      line-height: 1.4;
+      color: #626262;
+    }
+    :-ms-input-placeholder {
+      font-size: 20px;
+      line-height: 1.4;
+      color: #626262;
+    }
+    ::placeholder {
+      font-size: 20px;
+      line-height: 1.4;
+      color: #626262;
+    }
+    .input-group-text {
+      padding-right: 32px;
+      padding-left: 32px;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.9px;
+      color: #ffffff;
+      background-color: $p-color;
+    }
+  }
+}
+
+// styles for the footer
+footer {
+  margin-top: 17vh;
+  padding: 52px 6vw 6vw 6vw;
+  background-color: #282828;
+  .logo {
+    margin-top: 10px;
+  }
+  .social-icons {
+    margin-top: 24px;
+    > * {
+      margin-right: 8px;
+    }
+  }
+  .footer-links {
+    a {
+      margin-left: 24px;
+      margin-top: 12px;
+      font-size: 20px;
+      font-weight: normal;
+      line-height: 1.4;
+      color: #626262;
+    }
+  }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+  // styles for hero section
+  .hero-section {
+    .hero-image {
+      margin-top: 5vh;
+    }
+  }
+
+  section.what-we-do {
+    .order-last {
+      order: -1;
+    }
+    .header {
+      padding: 0 10vw 0 10vw !important;
+    }
+    .details,
+    .img-peach,
+    .img-grey {
+      margin-top: 5vh;
+    }
+    .img-peach,
+    .img-grey {
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  .hero-section {
+    h1 {
+      font-size: 48px;
+      word-break: break-all;
     }
   }
 }
