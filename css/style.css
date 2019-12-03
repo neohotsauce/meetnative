@@ -426,11 +426,30 @@ section.what-we-do .img-grey img {
     max-width: 100%;
     height: auto;
   }
+  section.what-we-do .grey-row .details {
+    padding: 0 14vw 0 5vw;
+  }
 }
 @media (max-width: 767.98px) {
   .hero-section h1 {
     font-size: 48px;
     word-break: break-all;
+  }
+}
+@media (max-width: 575.98px) {
+  .hero-section h1 {
+    font-size: 38px;
+    word-break: normal;
+  }
+
+  section.how-it-works > div.row {
+    padding: 0 7vw 0 7vw;
+  }
+
+  section.announcement .input-group-text {
+    padding-right: 8px !important;
+    padding-left: 8px !important;
+    font-size: 12px !important;
   }
 }
 
