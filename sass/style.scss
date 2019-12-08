@@ -56,6 +56,20 @@ nav {
     margin-top: 48px;
     margin-left: 24px;
   }
+  .button-sec {
+    border-radius: 5px;
+    border: 1px solid white;
+    color: #fff;
+    padding: 16px 32px;
+    font-weight: 800;
+    font-size: 16px;
+    width: auto;
+    margin-top: 48px;
+    margin-left: 24px;
+    a {
+      margin-left: 0;
+    }
+  }
   .logo {
     margin-top: 56px;
     margin-left: 0px;
@@ -70,7 +84,7 @@ nav.mobile-nav {
   #menuToggle {
     display: flex;
     flex-direction: column;
-    margin-top: 7vw;
+    margin-top: 66px;
     z-index: 1;
     -webkit-user-select: none;
     user-select: none;
@@ -415,8 +429,41 @@ footer {
   }
 }
 
+// nav wrapper styles
+@media (max-width: 1490px) {
+  .hero-section {
+    h1 {
+      font-size: 64px;
+    }
+  }
+  .desktop-nav {
+    display: none !important;
+  }
+  .mobile-nav-wrapper {
+    display: block !important;
+    nav.mobile-nav #menuToggle span {
+      background: #ffffff;
+    }
+  }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+  .hero-section {
+    h1 {
+      font-size: 64px;
+    }
+  }
+}
+
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) {
+  .mobile-nav-wrapper {
+    nav.mobile-nav #menuToggle span {
+      background: $p-color;
+    }
+  }
+
   // styles for hero section
   .hero-section {
     .hero-image {
@@ -454,7 +501,6 @@ footer {
   .hero-section {
     h1 {
       font-size: 48px;
-      word-break: break-all;
     }
   }
 }
@@ -464,7 +510,6 @@ footer {
   .hero-section {
     h1 {
       font-size: 34px;
-      word-break: normal;
     }
   }
   section.how-it-works {
@@ -477,6 +522,102 @@ footer {
       padding-right: 8px !important;
       padding-left: 8px !important;
       font-size: 12px !important;
+    }
+  }
+}
+
+// specific styles for ie
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  // IE10+ CSS here
+
+  .hero-article {
+    > div {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+  }
+
+  .hero-image {
+    display: block !important;
+  }
+
+  section.what-we-do {
+    .d-flex > * {
+      -ms-flex: 1;
+    }
+  }
+
+  .mobile-nav {
+    overflow: hidden;
+    #menuToggle {
+      position: absolute;
+      right: 8vw;
+      #menu {
+        top: 0;
+        right: 0;
+        width: 40vw;
+      }
+    }
+  }
+
+  section.how-it-works {
+    .card-wrapper {
+      .d-flex {
+        > * {
+          -ms-flex: 0 0 50%;
+        }
+        > h3 {
+          text-align: right;
+          transform: translate(0, -20%);
+        }
+        > div {
+          display: block !important;
+        }
+        img {
+          max-height: 85px;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  section.discover {
+    .card-wrapper {
+      padding: 20px !important;
+      height: 100%;
+      > * {
+        position: relative !important;
+        display: block !important;
+      }
+      .flex-column {
+        > div {
+          text-align: center;
+          margin-top: auto;
+        }
+        > h5 {
+          margin-bottom: auto;
+          white-space: wrap;
+          max-width: 99%;
+        }
+      }
+    }
+  }
+
+  // nav wrapper styles
+  @media (max-width: 1490px) {
+    .mobile-nav {
+      justify-content: flex-start !important;
+    }
+  }
+
+  // Medium devices (tablets, less than 992px)
+  @media (max-width: 991.98px) {
+    .hero-article > div {
+      position: static;
+      top: auto;
+      transform: none;
     }
   }
 }
